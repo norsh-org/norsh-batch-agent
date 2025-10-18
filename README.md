@@ -56,15 +56,21 @@ Optional arguments:
 | `-p, --pwd`      | Password for private key (if encrypted)                 |
 | `-j, --json`     | Input JSON array file                                   |
 | `-n, --network`  | API network (default: `main`)                           |
-| `-e, --endpoint` | Choose API endpoint (`SANDBOX` or default `PRODUCTION`) |
+| `-e, --endpoint` | Optional: Use the SANDBOX endpoint for testing purposes.|
 | `-s, --silent`   | Suppress banner output                                  |
-| `-o, --output`   | Show JSON response from API                             |
+| `-o, --output`   | Show API response output (no effect if --nosend is used)|
 | `-ns, --nosend`  | Sign only, output signed payload without sending to API |
+
+Show Help:
+
+```bash
+python norsh-batch-agent.py -h
+```
 
 Example:
 
 ```bash
-python norsh-batch-agent.py -k private.pem -p test123 -j sample.json -e SANDBOX -ns
+python norsh-batch-agent.py -k private.pem -p test123 -j sample.json -e SANDBOX
 ```
 
 ---
